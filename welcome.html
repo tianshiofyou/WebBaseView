@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>疼的空间</title>
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        console.log(JSON.stringify(document.cookie))
+        function setText() {
+                //alert("123");
+                $("#text").text(getDataByCoockie("loginName") + "上次登录的时间是" + getDataByCoockie("lastLoginTime"));
+        }
+        $(document).ready(function () {
+            setText();
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <span >
+            <h1 id="text" class="animated flash">疼上次登录的时间是2017年12月14日15:34:55</h1>
+        </span>
+    </div>
+</body>
+</html>
